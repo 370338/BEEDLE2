@@ -1,0 +1,138 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    }
+  /*html{
+    scroll-behavior: smooth;
+  }*/
+
+
+    /* LOGO BUTTON */
+    .logo-btn{
+        border: none;
+        background-color: inherit;
+        height: 58.333px; /*because 350/6=58.333*/
+    }
+    .logo-btn img{
+        width: 350px;
+        margin-bottom: -3.9px;
+    }
+    .logo-btn:hover {
+        /*background-color: #ddd;*/
+        /*background-color: rgba(58, 44, 255, 0.7);*/
+        /*background-color: rgba(255, 88, 69, 0.7);*/
+        background-color: rgba(255, 0, 0, 0.7);
+    }
+
+
+    /* NAVBAR */
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 350px;
+        /*background-color: rgba(0, 0, 0, 0.4);*/
+        /*padding: 20px;*/
+        /*opacity: 0.5;*/
+        z-index: 1;
+    }
+    
+    /* MAIN BUTTONS */
+    .nav-btn {
+        width: 350px;
+        height: 58.333px; /*because 350/6=58.333*/
+        /*padding: 8px 16px;*/
+        padding: -30px;
+        text-align: left;
+        border: none;
+        background-color: inherit;
+        /*cursor: pointer;
+        /*outline: none;*/
+        color: white;
+    }
+
+    .nav-btn img{
+        height: 58.333px;
+        margin-top: -0.5px;
+        margin-bottom: -4px;
+    }
+
+    .nav-btn:hover {
+        /*background-color: rgba(255, 159, 69, 0.7);*/
+        /*background-color: rgba(54, 44, 195, 0.7);*/
+        background-color: rgba(255, 0, 0, 0.7);
+    }
+
+
+    /* SUBNAV */
+    .subnav {
+        max-height: 0;
+        overflow: hidden;
+        /*padding-left: 10px;*/
+        transition: max-height 0.4s ease-out;
+    }
+
+    /* SUBNAV BUTTONS */
+    .subnav-btn {
+        color: white;
+        width: 350px;
+        height: 58.333px; /*because 350/6=58.333*/
+        /*padding: 20px;*/
+        text-align: left;
+        border: none;
+        background-color: inherit;
+        cursor: pointer;
+        outline: none;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+        margin-top: -1.1px;
+        margin-bottom: -1px;
+    }
+
+    .subnav-btn img{
+        float: left;
+        height: 58.333px;
+        margin-top: -4px;
+        margin-bottom: -4px;
+    }
+    
+    .subnav-btn:hover {
+       /*background-color: rgba(255, 240, 69, 0.7);*/
+       background-color: rgba(255, 0, 0, 0.7);
+    }
+
+
+    /* ACTIONS */
+    .nav-btn.active + .subnav {
+        max-height: 200px; /* Adjust the value to fit your needs */
+        transition-timing-function: ease-in;
+    }
+    
+    .nav-btn.active + .subnav .subnav-btn {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0.1s; /* Adjust the delay to control the cascading effect */
+    }
+    
+    .nav-btn:not(.active) + .subnav .subnav-btn {
+        opacity: 0;
+        transform: translateY(-20px);
+        transition-delay: 0s;
+    }
+
+    #preview-container {
+        position: absolute;
+        top: 50%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+    }
+      
+    #preview-image {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+  
+  
